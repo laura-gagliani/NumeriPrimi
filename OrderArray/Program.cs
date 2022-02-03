@@ -70,6 +70,45 @@ namespace OrderArray
             {
                 Console.WriteLine(item);
             }
+
+
+
+            //riprova decrescente
+
+            Random rnd = new Random();
+            int[] b = new int[10];
+
+            Console.WriteLine("\nIl vettore è:");
+            for (int i = 0; i < b.Length; i++)
+            {
+                a[i] = rnd.Next(1, 101);
+                Console.Write(b[i] + "\t");
+
+            }
+
+            int position = 0;
+            int spare;
+            int maximum;
+
+            for (int i = 0; i < b.Length; i++)
+            {
+                maximum = b[i];
+
+                for (int j = i; j < b.Length; j++)
+                {
+                    if (b[j] > maximum)
+                    {
+                        maximum = b[j];
+                        position = j;
+                    }
+                }
+                //uscita da qua ho sicuramente il vero massimo
+                spare = b[i];
+                b[i] = maximum;
+                b[position] = spare;
+
+            }
+
         }
     }
 }

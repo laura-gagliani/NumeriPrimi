@@ -9,7 +9,15 @@ namespace Palindromes
             bool isEqual = true;
             string palindromo = "onorarono";
 
-            for (int i = 0; i < palindromo.Length; i++)
+            //for (int i = 0; i < palindromo.Length; i++)
+            //{
+            //    if (palindromo[i] != palindromo[palindromo.Length - 1 - i])
+            //    {
+            //        isEqual = false;
+            //    }
+            //}
+
+            for (int i = 0; i <= palindromo.Length/2; i++)
             {
                 if (palindromo[i] != palindromo[palindromo.Length - 1 - i])
                 {

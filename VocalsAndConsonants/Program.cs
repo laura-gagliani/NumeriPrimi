@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace VocalsAndConsonants
 {
@@ -19,6 +20,11 @@ namespace VocalsAndConsonants
             }
             countConsonanti = parola.Length - countVocali;
             Console.WriteLine($"totale: {parola.Length} vocali: {countVocali} consonanti: {countConsonanti}");
+
+
+            int vocals = parola.Where(c => c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u').Count();
+            int chars = parola.Count();
+            int consonants = chars - vocals;
         }
     }
 }

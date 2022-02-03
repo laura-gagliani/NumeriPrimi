@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace CaratteriStringa
 {
@@ -26,6 +27,13 @@ namespace CaratteriStringa
             }
             else
                 Console.WriteLine($"Il carattere {carattere} non è stato trovato");
+
+            //LINQ: esempi
+            var prova = from c in stringa where c == 'i' select c;  //rende un IEnumerable di tutte le "i" che compaiono
+            var prova2 = stringa.Where(c => c == 'i').Count();      //conta le volte in cui compare "i"
+            var prova3 = stringa.Where(c => c == 'i').ToArray();    //rende tutte le "i" in un Array
+
+            Console.WriteLine();
         }
     }
 }

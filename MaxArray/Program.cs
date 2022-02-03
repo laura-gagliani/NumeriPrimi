@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace MaxArray
 {
@@ -19,6 +20,20 @@ namespace MaxArray
             }
 
             Console.WriteLine(max);
+
+            Random rnd = new Random();
+            int[] b = new int[10];
+
+            Console.WriteLine("Il vettore è:");
+            for (int i = 0; i < b.Length; i++)
+            {
+                b[i] = rnd.Next(1, 101);
+                Console.Write(b[i] + "\t");
+
+            }
+
+            int maxB = b.Max();
+            Console.WriteLine("\n il max è: "+ maxB);
         }
     }
 }
